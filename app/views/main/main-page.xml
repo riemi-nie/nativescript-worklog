@@ -1,0 +1,37 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <Page.actionBar>
+    <ActionBar title="Arbeitszeit"/>
+  </Page.actionBar>
+  <TabView>
+    <TabView.items>
+      <TabViewItem title="November">
+        <TabViewItem.view>
+          <StackLayout class="tab-content">
+            <Label text="{{ months.last.summary }}" class="title" textWrap="true"/>
+            <ListView items="{{ months.last.events }}">
+              <ListView.itemTemplate>
+                <Label text="{{ tDuration }}"
+                       horizontalAlignment="left"
+                       verticalAlignment="center"/>
+              </ListView.itemTemplate>
+            </ListView>
+          </StackLayout>
+        </TabViewItem.view>
+      </TabViewItem>
+      <TabViewItem title="Dezember">
+        <TabViewItem.view>
+          <StackLayout class="tab-content">
+            <Label text="{{ months.current.summary }}" class="title" textWrap="true"/>
+            <ListView items="{{ months.current.events }}">
+              <ListView.itemTemplate>
+                <Label text="{{ tDuration }}"
+                       horizontalAlignment="left"
+                       verticalAlignment="center"/>
+              </ListView.itemTemplate>
+            </ListView>
+          </StackLayout>
+        </TabViewItem.view>
+      </TabViewItem>
+    </TabView.items>
+  </TabView>
+</Page>

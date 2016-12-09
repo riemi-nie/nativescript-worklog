@@ -1,0 +1,8 @@
+platforms/
+.js.map
+*.map
+app/shared/calendar.service.js
+app/shared/config.js
+app/shared/view-models/main-view.model.js
+app/views/main/main-page.js
+app/app.js
